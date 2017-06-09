@@ -14,6 +14,8 @@
 		6A82E9131EEA261A00145B52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A82E9111EEA261A00145B52 /* LaunchScreen.storyboard */; };
 		6A82E91C1EEA2AC000145B52 /* PanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A82E91B1EEA2ABF00145B52 /* PanViewController.m */; };
 		6A82E91F1EEA2AD000145B52 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A82E91E1EEA2AD000145B52 /* TapViewController.m */; };
+		6A82E9221EEA332D00145B52 /* PinchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A82E9211EEA332D00145B52 /* PinchViewController.m */; };
+		6A82E9251EEA34CE00145B52 /* constraintApplier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A82E9241EEA34CE00145B52 /* constraintApplier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		6A82E91B1EEA2ABF00145B52 /* PanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanViewController.m; sourceTree = "<group>"; };
 		6A82E91D1EEA2AD000145B52 /* TapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapViewController.h; sourceTree = "<group>"; };
 		6A82E91E1EEA2AD000145B52 /* TapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapViewController.m; sourceTree = "<group>"; };
+		6A82E9201EEA332D00145B52 /* PinchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinchViewController.h; sourceTree = "<group>"; };
+		6A82E9211EEA332D00145B52 /* PinchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinchViewController.m; sourceTree = "<group>"; };
+		6A82E9231EEA34CE00145B52 /* constraintApplier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constraintApplier.h; sourceTree = "<group>"; };
+		6A82E9241EEA34CE00145B52 /* constraintApplier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = constraintApplier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,12 @@
 				6A82E90F1EEA261A00145B52 /* Assets.xcassets */,
 				6A82E91A1EEA2ABF00145B52 /* PanViewController.h */,
 				6A82E91B1EEA2ABF00145B52 /* PanViewController.m */,
+				6A82E9231EEA34CE00145B52 /* constraintApplier.h */,
+				6A82E9241EEA34CE00145B52 /* constraintApplier.m */,
 				6A82E91D1EEA2AD000145B52 /* TapViewController.h */,
 				6A82E91E1EEA2AD000145B52 /* TapViewController.m */,
+				6A82E9201EEA332D00145B52 /* PinchViewController.h */,
+				6A82E9211EEA332D00145B52 /* PinchViewController.m */,
 				6A82E9111EEA261A00145B52 /* LaunchScreen.storyboard */,
 				6A82E9141EEA261A00145B52 /* Info.plist */,
 				6A82E9031EEA261A00145B52 /* Supporting Files */,
@@ -157,7 +167,9 @@
 			files = (
 				6A82E91C1EEA2AC000145B52 /* PanViewController.m in Sources */,
 				6A82E9081EEA261A00145B52 /* AppDelegate.m in Sources */,
+				6A82E9221EEA332D00145B52 /* PinchViewController.m in Sources */,
 				6A82E91F1EEA2AD000145B52 /* TapViewController.m in Sources */,
+				6A82E9251EEA34CE00145B52 /* constraintApplier.m in Sources */,
 				6A82E9051EEA261A00145B52 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

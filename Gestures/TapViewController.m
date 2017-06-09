@@ -14,4 +14,14 @@
 
 @implementation TapViewController
 
+-(void)viewDidLoad {
+    constraintApplier *constApplier = [[constraintApplier alloc] init];
+    
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+    self.yellowView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [constApplier pinFourCornersOfView:self.yellowView toSuperView:self.view];
+    
+}
+
 @end

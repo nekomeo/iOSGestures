@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "constraintApplier.h"
+#import <UIKit/UIKit.h>
 
 @interface TapViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIView *yellowView;
 
 @end

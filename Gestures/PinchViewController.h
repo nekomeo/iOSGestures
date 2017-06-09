@@ -1,5 +1,5 @@
 //
-//  PanViewController.h
+//  PinchViewController.h
 //  Gestures
 //
 //  Created by Elle Ti on 2017-06-08.
@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PanViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UIView *redView;
-
-
+@interface PinchViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIView *pinkView;
 
 @end
