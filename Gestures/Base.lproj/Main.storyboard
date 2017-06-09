@@ -30,7 +30,7 @@
         <!--Tap-->
         <scene sceneID="u65-1a-E2a">
             <objects>
-                <viewController id="g8z-t4-rRp" sceneMemberID="viewController">
+                <viewController id="g8z-t4-rRp" customClass="TapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NAq-H2-EXD"/>
                         <viewControllerLayoutGuide type="bottom" id="eBG-eB-z5t"/>
@@ -49,7 +49,7 @@
         <!--Pan-->
         <scene sceneID="XQc-yv-gIf">
             <objects>
-                <viewController id="6WK-Bh-qf0" sceneMemberID="viewController">
+                <viewController id="6WK-Bh-qf0" customClass="PanViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ibG-lz-iAy"/>
                         <viewControllerLayoutGuide type="bottom" id="UHp-1E-teG"/>
@@ -57,11 +57,27 @@
                     <view key="view" contentMode="scaleToFill" id="42a-FV-NOd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeI-Ji-DTG">
+                                <rect key="frame" x="80" y="161" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.21749469730000001" blue="0.1590399562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BDz-fR-SUg" appends="YES" id="ITP-fS-amt"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pan" image="item1" id="cjf-Zw-jbO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXa-4n-Clc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BDz-fR-SUg">
+                    <connections>
+                        <action selector="redViewPanned:" destination="6WK-Bh-qf0" id="zig-2Q-frP"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="66" y="-483"/>
         </scene>
