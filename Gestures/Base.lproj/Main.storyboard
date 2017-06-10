@@ -22,6 +22,9 @@
                         <segue destination="6WK-Bh-qf0" kind="relationship" relationship="viewControllers" id="pRi-l9-Elj"/>
                         <segue destination="g8z-t4-rRp" kind="relationship" relationship="viewControllers" id="9yK-EQ-n4o"/>
                         <segue destination="PDl-J8-eYb" kind="relationship" relationship="viewControllers" id="dxi-84-fhl"/>
+                        <segue destination="dqd-aj-SNv" kind="relationship" relationship="viewControllers" id="8kx-8k-1M1"/>
+                        <segue destination="Bac-Sv-UUr" kind="relationship" relationship="viewControllers" id="s1I-ON-YaC"/>
+                        <segue destination="3ch-Uf-p7U" kind="relationship" relationship="viewControllers" id="oSF-p1-gXQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kmx-hl-QpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,7 +51,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qc-7v-sez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="181"/>
+            <point key="canvasLocation" x="65" y="247"/>
+        </scene>
+        <!--Rotate-->
+        <scene sceneID="LfH-cj-6zR">
+            <objects>
+                <viewController id="Bac-Sv-UUr" customClass="RotateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ezO-je-dfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="KTR-aU-W12"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wjd-HD-Rqw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.18345618320000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rotate" image="item5" id="ENb-df-Yad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzb-tZ-UJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="247"/>
+        </scene>
+        <!--Swipe-->
+        <scene sceneID="d8m-oR-5bL">
+            <objects>
+                <viewController id="dqd-aj-SNv" customClass="SwipeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="27X-Rb-bBl"/>
+                        <viewControllerLayoutGuide type="bottom" id="x5V-Ru-ygf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mp4-Zt-ixr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.71481345351926517" blue="0.32147800908507429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Swipe" image="item4" id="ogE-Uz-ZsZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyO-U4-ou5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="-484"/>
         </scene>
         <!--Pinch-->
         <scene sceneID="SP2-GD-QtJ">
@@ -70,7 +111,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMZ-1Y-SXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="852"/>
+            <point key="canvasLocation" x="65" y="971"/>
+        </scene>
+        <!--Edge-->
+        <scene sceneID="bdw-xV-UTk">
+            <objects>
+                <viewController id="3ch-Uf-p7U" customClass="EdgeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OMC-eK-T9T"/>
+                        <viewControllerLayoutGuide type="bottom" id="fPL-0f-ApK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SoU-Z8-tdg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.98235789982416155" blue="0.65855194766263403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Edge" image="item6" id="G6G-2h-T3B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfz-Sz-vOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="970"/>
         </scene>
         <!--Pan-->
         <scene sceneID="XQc-yv-gIf">
@@ -115,5 +175,8 @@
         <image name="item1" width="30" height="30"/>
         <image name="item2" width="30" height="28"/>
         <image name="item3" width="30" height="28"/>
+        <image name="item4" width="30" height="30"/>
+        <image name="item5" width="30" height="30"/>
+        <image name="item6" width="30" height="30"/>
     </resources>
 </document>
