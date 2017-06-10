@@ -11,6 +11,7 @@
 @interface SwipeViewController ()
 @property (nonatomic) UIView *brownBox;
 @property (nonatomic) UIView *whiteBox;
+@property (nonatomic) BOOL open;
 
 @end
 
@@ -19,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Brown Box
     CGFloat width = 400;
     CGFloat height = 50;
     
@@ -26,21 +29,44 @@
     
     UIView *view = [[UIView alloc] initWithFrame:frame];
     view.backgroundColor = [UIColor brownColor];
+    self.brownBox = view;
     [self.view addSubview:view];
+    [self.brownBox setClipsToBounds:YES];
     
-    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectZero]; // make white appear over brown
-    whiteView.translatesAutoresizingMaskIntoConstraints = NO;
-    whiteView.backgroundColor = [UIColor whiteColor];
-    [self.brownBox addSubview:whiteView];
-    self.whiteBox = whiteView;
+    // White Box
+    self.whiteBox = [[UIView alloc] initWithFrame:view.bounds];
+    self.whiteBox.backgroundColor = [UIColor whiteColor];
+    [self.brownBox addSubview:self.whiteBox];
     
-    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(viewSwiped:)];
-    [view addGestureRecognizer:swipeGesture];
+    UISwipeGestureRecognizer *swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.whiteBox addGestureRecognizer:swipeLeftGesture];
+    
+    UISwipeGestureRecognizer *swipeRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRightGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.whiteBox addGestureRecognizer:swipeRightGesture];
+    
 }
 
-- (void)viewSwiped:(UISwipeGestureRecognizer *)sender
+- (void)didSwipe:(UISwipeGestureRecognizer *)sender
 {
-    
+    switch (sender.direction)
+    {
+        case UISwipeGestureRecognizerDirectionLeft:
+        {
+            sender.view.center = CGPointMake(CGRectGetMidX(self.brownBox.bounds) - 100, sender.view.center.y);
+            NSLog(@"Swipe right detected");
+        }
+            break;
+        case UISwipeGestureRecognizerDirectionRight:
+        {
+            sender.view.center = CGPointMake(CGRectGetMidX(self.brownBox.bounds), sender.view.center.y);
+            NSLog(@"Swipe left detected");
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 
