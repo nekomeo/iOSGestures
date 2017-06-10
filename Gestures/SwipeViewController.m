@@ -28,7 +28,7 @@
     view.backgroundColor = [UIColor brownColor];
     [self.view addSubview:view];
     
-    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectZero];
+    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectZero]; // make white appear over brown
     whiteView.translatesAutoresizingMaskIntoConstraints = NO;
     whiteView.backgroundColor = [UIColor whiteColor];
     [self.brownBox addSubview:whiteView];

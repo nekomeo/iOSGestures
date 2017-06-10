@@ -22,14 +22,18 @@
     CGRect frame = CGRectMake(CGRectGetMidX(self.view.bounds) - width/2, CGRectGetMidY(self.view.bounds) - height/2, width, height);
     
     UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.backgroundColor = [UIColor purpleColor];
+    view.backgroundColor = [UIColor redColor];
     [self.view addSubview:view];
     
     UIRotationGestureRecognizer *rotateGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(viewRotate:)];
     [view addGestureRecognizer:rotateGesture];
-}
+    }
 
 - (void)viewRotate:(UIRotationGestureRecognizer *)sender
-{}
+{
+    CGAffineTransform transform = CGAffineTransformMakeRotation(sender.rotation);
+    sender.view.transform = transform;
+    NSLog(@"Rotating %@", NSStringFromCGAffineTransform(sender.view.transform));
+}
 
 @end
