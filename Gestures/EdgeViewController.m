@@ -12,7 +12,6 @@
 
 @property (nonatomic) UIView *edgeView;
 @property (nonatomic) UIScreenEdgePanGestureRecognizer *edgePanGesture;
-@property (nonatomic) UIPanGestureRecognizer *panGesture;
 
 @property (nonatomic) CGFloat edgeViewOldMidX;
 @property (nonatomic) CGFloat edgeViewNewMidX;
@@ -36,10 +35,6 @@
     self.edgePanGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(viewEdgePan:)];
     self.edgePanGesture.edges = UIRectEdgeRight;
     [self.edgeView addGestureRecognizer:self.edgePanGesture];
-    
-    self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panned:)];
-    [self.edgeView addGestureRecognizer:self.panGesture];
-    self.panGesture.enabled = NO;
 }
 
 - (void)viewEdgePan:(UIScreenEdgePanGestureRecognizer *)sender
@@ -67,8 +62,8 @@
                 self.edgeViewNewMidX = sender.view.center.x;
                 [sender.view removeGestureRecognizer:sender];
                 
-                self.edgePanGesture.enabled = NO;
-                self.panGesture.enabled = YES;
+                UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panned:)];
+                [self.edgeView addGestureRecognizer:panGesture];
 
                 break;
             }
@@ -101,12 +96,10 @@
                 }];
                 [sender.view removeGestureRecognizer:sender];
                 
-                self.panGesture.enabled = NO;
-                self.edgePanGesture.enabled = YES;
+                [self.edgeView addGestureRecognizer:self.edgePanGesture];
                 
                 break;
             }
-            
         default:
             break;
     }
