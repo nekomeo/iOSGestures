@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PinchViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIView *pinkView;
 
 @end

@@ -10,8 +10,5 @@
 
 @interface PanViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *redView;
-
-
 
 @end

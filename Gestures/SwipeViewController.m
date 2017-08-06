@@ -27,14 +27,14 @@
     
     CGRect frame = CGRectMake(CGRectGetMidX(self.view.bounds) - width/2, CGRectGetMidY(self.view.bounds) - height/2, width, height);
     
-    UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.backgroundColor = [UIColor brownColor];
-    self.brownBox = view;
-    [self.view addSubview:view];
+    self.brownBox = [[UIView alloc] initWithFrame:frame];
+    self.brownBox.backgroundColor = [UIColor brownColor];
+
+    [self.view addSubview:self.brownBox];
     [self.brownBox setClipsToBounds:YES];
     
     // White Box
-    self.whiteBox = [[UIView alloc] initWithFrame:view.bounds];
+    self.whiteBox = [[UIView alloc] initWithFrame:self.brownBox.bounds];
     self.whiteBox.backgroundColor = [UIColor whiteColor];
     [self.brownBox addSubview:self.whiteBox];
     
@@ -55,13 +55,13 @@
         case UISwipeGestureRecognizerDirectionLeft:
         {
             sender.view.center = CGPointMake(CGRectGetMidX(self.brownBox.bounds) - 100, sender.view.center.y);
-            NSLog(@"Swipe right detected");
+//            NSLog(@"Swipe left detected");
         }
             break;
         case UISwipeGestureRecognizerDirectionRight:
         {
             sender.view.center = CGPointMake(CGRectGetMidX(self.brownBox.bounds), sender.view.center.y);
-            NSLog(@"Swipe left detected");
+//            NSLog(@"Swipe right detected");
         }
             break;
         default:

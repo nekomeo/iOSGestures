@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qq1-Yh-H5r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qq1-Yh-H5r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,9 +45,6 @@
                         <color key="backgroundColor" red="1" green="0.96330317025026646" blue="0.33272767766586719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tap" image="item2" id="QFS-4u-IxE"/>
-                    <connections>
-                        <outlet property="yellowView" destination="p6T-Vg-iY6" id="0sY-sl-4fA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qc-7v-sez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,9 +102,6 @@
                         <color key="backgroundColor" red="1" green="0.49367004165840278" blue="0.9950719301318669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pinch" image="item3" id="9kc-FJ-ctJ"/>
-                    <connections>
-                        <outlet property="pinkView" destination="ZiD-IR-JXN" id="Ota-dj-7pw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMZ-1Y-SXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,9 @@
 //
 
 #import "PanViewController.h"
-//#import "constraintApplier.h"
 
 @interface PanViewController ()
+@property (weak, nonatomic) IBOutlet UIView *redView;
 
 @end
 
@@ -27,14 +27,5 @@
     [sender setTranslation:CGPointZero inView:self.view];
 }
 
-//-(void)viewDidLoad {
-//    constraintApplier *constApplier = [[constraintApplier alloc] init];
-//    
-//    self.view.translatesAutoresizingMaskIntoConstraints = NO;
-//    self.redView.translatesAutoresizingMaskIntoConstraints = NO;
-//    
-//    [constApplier pinFourCornersOfView:self.redView toSuperView:self.view];
-//    
-//}
 
 @end

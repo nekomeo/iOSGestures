@@ -9,6 +9,7 @@
 #import "TapViewController.h"
 
 @interface TapViewController ()
+
 @property (nonatomic) BOOL changeColor;
 @property (nonatomic) UIView *box;
 
@@ -24,18 +25,17 @@
     
     CGRect frame = CGRectMake(CGRectGetMidX(self.view.bounds) - width/2, CGRectGetMidY(self.view.bounds) - height/2, width, height);
     
-    UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:view];
-    self.box = view;
+    self.box = [[UIView alloc] initWithFrame:frame];
+    self.box.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:self.box];
 
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(whenTapped:)];
-    [view addGestureRecognizer:tapGesture];
+    [self.box addGestureRecognizer:tapGesture];
 }
 
 - (void)whenTapped:(UITapGestureRecognizer *)sender
 {
-    NSLog(@"Current color %@", self.box.backgroundColor);
+//    NSLog(@"Current color %@", self.box.backgroundColor);
     self.box.backgroundColor = [self.box.backgroundColor isEqual:[UIColor orangeColor]] ? [UIColor purpleColor] : [UIColor orangeColor];
 }
 

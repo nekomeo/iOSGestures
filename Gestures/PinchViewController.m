@@ -7,8 +7,6 @@
 //
 
 #import "PinchViewController.h"
-//#import "constraintApplier.h"
-//#import <UIKit/UIKit.h>
 
 @interface PinchViewController ()
 
@@ -16,15 +14,6 @@
 
 @implementation PinchViewController
 
-//-(void)viewDidLoad {
-//    constraintApplier *constApplier = [[constraintApplier alloc] init];
-//    
-//    self.view.translatesAutoresizingMaskIntoConstraints = NO;
-//    self.pinkView.translatesAutoresizingMaskIntoConstraints = NO;
-//    
-//    [constApplier pinFourCornersOfView:self.pinkView toSuperView:self.view];
-//    
-//}
 
 - (void)viewDidLoad
 {
@@ -34,12 +23,12 @@
     
     CGRect frame = CGRectMake(CGRectGetMidX(self.view.bounds) - width/2, CGRectGetMidY(self.view.bounds) - height/2, width, height);
     
-    UIView *view = [[UIView alloc] initWithFrame:frame];
-    view.backgroundColor = [UIColor purpleColor];
-    [self.view addSubview:view];
+    UIView *purpleView = [[UIView alloc] initWithFrame:frame];
+    purpleView.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:purpleView];
     
     UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(viewPinched:)];
-    [view addGestureRecognizer:pinchGesture];
+    [purpleView addGestureRecognizer:pinchGesture];
 }
 
 - (void)viewPinched:(UIPinchGestureRecognizer *)sender
